@@ -94,7 +94,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	            <div class="columfooter">
 	               <h4>Reunión General</h4>
 	               Domingos. 11:30h
-	               c/ Galileo 100 >
+	               c/ Galileo 100<br>
 	               <a href="#">ver mapa</a>
 	            </div>
 	            <div class="columfooter">
