@@ -110,7 +110,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	            <div class="columfooter">
 	               <h4>Redes</h4>
 	               Profesionales
-	               Jueves, 20:00h
+	               Jueves, 20:00h<br>
 	               <a href="http://facebook.com/RedesAmistadCristiana">Redes en Facebook</a>
 	            </div>
 	            <div class="columfootermini">
