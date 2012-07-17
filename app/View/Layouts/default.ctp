@@ -46,7 +46,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container" class="wrapper">
 		<div class="container" id="header">
-	      <a href="https://www.facebook.com/amistadcristianamadrid" target="_blank">Facebook</a> | <a href="https://twitter.com/#!/AmistadMadrid" target="_blank">Twitter</a> | <a href="http://www.youtube.com/user/AmistadMadrid" target="_blank">Youtube</a>
+	      <a href="https://www.facebook.com/amistadcristianamadrid" target="_blank"><img src="<? echo $this->Html->url('/');?>images/fb.png" alt="facebook amistad cristiana madrid"> Facebook</a> | <a href="https://twitter.com/#!/AmistadMadrid" target="_blank"><img src="<? echo $this->Html->url('/');?>images/twitter.png" alt="twitter amistad cristiana madrid"> Twitter</a> | <a href="http://www.youtube.com/user/AmistadMadrid" target="_blank"> <img src="<? echo $this->Html->url('/');?>images/youtube.gif" alt="youtube amistad cristiana madrid"> Youtube</a>
 	   </div>
 		<div id="content" class="container">
 			<div class="row">
@@ -101,7 +101,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	               <h4>Ignition</h4>
 	               Jóvenes en edad universitaria
 	               Martes. 19:30h
-	               <a href="http://facebook.com/IgnitionMadrid">Ignition en Facebook</a>
+	               <a href="http://facebook.com/IgnitionMadrid"><img src="<? echo $this->Html->url('/');?>images/fb.png" alt="facebook Ignition"> Ignition en Facebook</a>
 	            </div>
 	            <div class="columfooter">
 	               <h4>Reunión de Oración</h4>
@@ -111,7 +111,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	               <h4>Redes</h4>
 	               Profesionales
 	               Jueves, 20:00h<br>
-	               <a href="http://facebook.com/RedesAmistadCristiana">Redes en Facebook</a>
+	               <a href="http://facebook.com/RedesAmistadCristiana"><img src="<? echo $this->Html->url('/');?>images/fb.png" alt="facebook Redes"> Redes en Facebook</a>
 	            </div>
 	            <div class="columfootermini">
 	               <h4>Grupos en casa</h4>
