@@ -115,7 +115,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	            </div>
 	            <div class="columfootermini">
 	               <h4>Grupos en casa</h4>
-	               <a href="#">ver zonas
+	               <a href="<? echo $this->Html->url('/', true);?>grupos">ver zonas
 	               y horarios</a>
 	            </div>
 	            </div>

@@ -43,6 +43,7 @@
 	Router::connect('/conocenos/nuestra_vision', array('controller' => 'pages', 'action' => 'display', 'vision'));
 	Router::connect('/conocenos/valores_y_principios', array('controller' => 'pages', 'action' => 'display', 'valores'));
 	Router::connect('/conocenos/legalidad', array('controller' => 'pages', 'action' => 'display', 'legalidad'));
+	Router::connect('/grupos', array('controller' => 'pages', 'action' => 'display', 'grupos'));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on 
