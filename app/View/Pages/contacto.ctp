@@ -4,7 +4,7 @@
 			<p>Ponte en contacto con nosotros</p>
 		</h4>
 
-		<strong><a href="mailto:email@amistadcristianamadrid.org">email@amistadcristianamadrid.org</a>  | T. 91 448 44 11</strong> 
+		<strong><a href="mailto:email@amistadcristianamadrid.org">email@amistadcristianamadrid.org</a>  | T. 91 448 44 11</strong>
 
 		<strong>Oficinas y Reuniones Semanales</strong>
 		<p>c/ Vallehermoso 70, Madrid (metro Canal y Quevedo)
@@ -20,6 +20,9 @@
 
 		<p>
 			<strong>Twitter: @AmistadMadrid</strong>
+		</p>
+		<p>
+			"Amistad Cristiana se compromete a una gestión escrupulosa de los fondos que pudiera recibir. Si quieres enviar un donativo, puedes hacerlo a la cuenta: 2100 1583 81 0200052375 . ¡Gracias!"
 		</p>
 	</div>
 
