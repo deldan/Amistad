@@ -100,7 +100,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	            <div class="columfooter">
 	               <h4>Ignition</h4>
 	               Jóvenes en edad universitaria
-	               Martes. 19:30h
+	               Martes. 19:45h
 	               <a href="http://facebook.com/IgnitionMadrid"><img src="<? echo $this->Html->url('/');?>images/fb.png" alt="facebook Ignition"> Ignition en Facebook</a>
 	            </div>
 	            <div class="columfooter">

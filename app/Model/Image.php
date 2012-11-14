@@ -7,7 +7,7 @@ App::uses('AppModel', 'Model');
 class Image extends AppModel {
 
 	var $name = 'Image';
-  var $actsAs = array(
+	var $actsAs = array(
 	    'MeioUpload' => array(
 			  'image' => array(
 					    'dir'              => 'files{DS}images{DS}',
@@ -21,7 +21,7 @@ class Image extends AppModel {
 						    'max' => array('width' => 595, 'height' => 290),
 					    )
 		    ),
- ));
+	));
 /**
  * Display field
  *

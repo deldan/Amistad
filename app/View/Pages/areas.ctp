@@ -18,7 +18,7 @@
 				</div>
 				<div class="despcrip grey2">
 					<p>El grupo de adolescentes de Amistad Cristiana. Para más información sobre reuniones, actividades, etc, consulta:</p>
-					<a href="http://www.facebook.com/groups/110536408973818/" target="_blank">>Facebook</a>
+					<a href="http://www.facebook.com/iLightmadrid" target="_blank">>Facebook</a>
 				</div>
 			</div>
 			<div class="four columns lateral">
@@ -27,7 +27,7 @@
 					<div class="lwhite">[ Jóvenes 18-30 años ]</div>
 				</div>
 				<div class="despcrip grey2">
-					<p>Si tienes entre 18 y 30 años no te pierdas la reunión semanal de Ignition (martes a las 20:00h). Además, entérate de otras actividades en su página de fb:</p>
+					<p>Si tienes entre 18 y 30 años no te pierdas la reunión semanal de Ignition (martes a las 19:45h). Además, entérate de otras actividades en su página de fb:</p>
 					<p  class="up">
 						<a href="http://www.facebook.com/IgnitionMadrid" target="_blank">>Facebook</a>
 					</p>
@@ -42,7 +42,7 @@
 					<div class="lwhite">[ Jóvenes profesionales ]</div>
 				</div>
 				<div class="despcrip grey2">
-					<p>Jueves a las 20 h.</p>
+					<p>No te pierdas la reunión de los jóvenes profesionales de Amistad Cristiana. Todos los jueves a las 20:30h.</p>
 					<a href="http://www.facebook.com/RedesAmistadCristiana" target="_blank">>Facebook</a>
 				</div>
 			</div>
@@ -51,7 +51,7 @@
 					<h5 class="lwhite">Mujeres</h5>
 				</div>
 				<div class="grey2">
-					<p>Las mujeres tenemos una reunión quincenal los miércoles a las 10:30h.</p>
+					<p>Las mujeres tenemos una reunión quincenal los jueves a las 10:20h.</p>
 					<a href="http://www.facebook.com/amistadcristianamadrid/events" target="_blank">>Facebook</a>
 				</div>
 			</div>
@@ -61,6 +61,7 @@
         </div>
         <div class="grey2">
         	<p>Si estás casado o comprometido en noviazgo y quieres profundizar en la relación con tu pareja ponte en contacto con nosotros. Matrimonios estables originan familias sanas.</p>
+			<a href="http://www.facebook.com/MatrimoniosAC" target="_blank">>Facebook</a>
         </div>
       </div>
 		</div>
