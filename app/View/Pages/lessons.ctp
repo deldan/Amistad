@@ -6,6 +6,7 @@
 	</div>
 </div>
 <div class="row">
+	<? var_dump($lessons);?>
 	<?php foreach ($lessons as $lesson): ?>
 		<div class="ten columns centered lessons2">
 			<div class="seven columns">

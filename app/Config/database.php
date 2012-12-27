@@ -59,7 +59,7 @@
  */
 class DATABASE_CONFIG {
 
-	public $default = array(
+	/*public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -68,9 +68,9 @@ class DATABASE_CONFIG {
 		'database' => 'amistad_new',
 		'prefix' => '',
 	  	'encoding' => 'utf8',
-	);
+	);*/
 
-	/*public $default = array(
+	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -79,5 +79,5 @@ class DATABASE_CONFIG {
 		'database' => 'amistad',
 		'prefix' => '',
 	  	'encoding' => 'utf8',
-	);*/
+	);
 }

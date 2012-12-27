@@ -52,7 +52,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Image', 'Lesson');
+	public $uses = array('Image', 'Lesson', 'Historie');
 
 	var $paginate = array( 'limit' => 10, 'order' => array('Lesson.date' => 'desc'));
 
@@ -105,6 +105,90 @@ class PagesController extends AppController {
         $lessons = $this->Lesson->find('all');
         return $this->set(compact('lessons'));
 		$this->set('lessons', $this->Lesson->find('all'));
+	}
+
+	public function titles(){
+		$result = null;
+		$loren = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet velit eget neque tincidunt lacinia. Mauris non libero eros, id ultricies sem. Fusce blandit enim sit amet urna sagittis varius. Cras in risus lacus. Phasellus sit amet justo ut nisi ultrices gravida. Nulla in mi id dui laoreet sodales. Integer dapibus, dolor vitae mattis malesuada, odio libero tempor risus, quis ultrices eros lorem a velit. In hac habitasse platea dictumst. Etiam sodales sodales mauris, eu commodo nunc luctus quis. Fusce diam libero, mollis eget tincidunt eget, aliquam sit amet augue. Nulla gravida accumsan nisl, a ultricies elit posuere elementum. Fusce sodales posuere cursus. In volutpat ornare volutpat. Suspendisse in purus ligula. Donec pretium, ante eget pulvinar pellentesque, metus lacus semper metus, elementum posuere felis leo eu lorem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+<p>Cras lorem urna, fringilla ac accumsan vitae, tempus quis felis. Curabitur fermentum mauris eu dui dignissim hendrerit. Phasellus arcu nisl, interdum consectetur interdum sed, faucibus ut nibh. Donec vel mi est, et dignissim erat. Etiam pulvinar, nulla ac sodales interdum, orci ante vulputate eros, id mollis libero metus eget felis. Vestibulum ultricies pretium elementum. Donec ultrices luctus nulla, at luctus orci aliquet eu. Quisque ac auctor tortor. Ut faucibus tortor id odio auctor vehicula imperdiet quam lacinia. Nunc nulla eros, dapibus at consequat sit amet, viverra a elit. In in diam non libero auctor pretium sed vel est. Maecenas venenatis lobortis risus, eget tincidunt urna feugiat eu. Curabitur condimentum, nibh nec sodales porttitor, arcu lorem vestibulum diam, vitae tempus ipsum quam a mi.</p>';
+		if($this->RequestHandler->isAjax() || $this->request->ext == 'json') {
+			$result[0]['id'] = 1;
+			$result[0]['title'] = 'Testimonio 1';
+			$result[0]['fecha'] = '20/05/2012';
+			$result[0]['text'] = $loren;
+			$result[1]['id'] = 2;
+			$result[1]['title'] = 'Testimonio 2';
+			$result[1]['fecha'] = '25/05/2012';
+			$result[1]['text'] = $loren;
+			$this->set('result', $result);
+			$this->set('_serialize', array('result'));
+		}else{
+			return $result;
+		}
+	}
+
+	public function histories(){
+		$result = null;
+		if($this->RequestHandler->isAjax() || $this->request->ext == 'json') {
+			$arr = $this->Historie->find('all', array('order' => array('Historie.date DESC')));
+			//$result = processed;
+			$processed = array();
+			/*foreach($arr as $subarr) {
+			   foreach($subarr as $id => $value) {
+			      if(!isset($processed[$id])) {
+			         $processed[$id] = array();
+			      }
+
+			      $processed[$id][] = $value;
+			   }
+			}*/
+			$processed = array_map(function($a) {  return array_pop($a); }, $arr);
+			$result = $processed;
+			$this->set('result', $result);
+			$this->set('_serialize', array('result'));
+		}else{
+			return $result;
+		}
+	}
+
+
+	public function podcast(){
+		$result = null;
+
+		if($this->RequestHandler->isAjax() || $this->request->ext == 'json') {
+			$arr = $this->Lesson->find('all', array('order' => array('Lesson.date DESC')));
+			//$result = processed;
+			/*$processed = array();
+			foreach($arr as $subarr) {
+			   foreach($subarr as $id => $value) {
+			      if(!isset($processed[$id])) {
+			         $processed[$id] = array();
+			      }
+
+			      $processed[$id][] = $value;
+			   }
+			}*/
+			$processed = array_map(function($a) {  return array_pop($a); }, $arr);
+			$result = $processed;
+			$this->set('result', $result);
+			$this->set('_serialize', array('result'));
+		}else{
+			return $result;
+		}
+	}
+
+	public function link(){
+		$result = null;
+		if($this->RequestHandler->isAjax() || $this->request->ext == 'json') {
+			$result[0]['id'] = 1;
+			$result[0]['title'] = 'el hobiit';
+			$result[0]['text'] = 'un gran libro de jr tolkien';
+			$this->set('result', $result);
+			$this->set('_serialize', array('result'));
+		}else{
+			return $result;
+		}
 	}
 
 }

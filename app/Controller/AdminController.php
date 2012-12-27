@@ -7,7 +7,7 @@ App::uses('AppController', 'Controller');
  */
 class AdminController extends AppController {
 
-  public $uses = array( 'Image', 'Lesson');
+  public $uses = array( 'Image', 'Lesson', 'Historie');
   public $layout = 'admin';
 
   function beforeFilter(){
@@ -265,4 +265,101 @@ class AdminController extends AppController {
     return true;
   }
 /*   ********************Lessons**************************** */
+
+/*   ********************Histories**************************** */
+/**
+ * index method
+ *
+ * @return void
+ */
+  public function indexHistorie() {
+    $this->Historie->recursive = 0;
+    $this->paginate = array(
+                              'Historie' => array(
+                                  'limit' => 20,
+                                  'order' => array('date' => 'desc')
+                                )
+                              );
+    $this->set('histories',$this->paginate('Historie') );
+  }
+
+/**
+ * view method
+ *
+ * @param string $id
+ * @return void
+ */
+  public function viewHistorie($id = null) {
+    $this->Historie->id = $id;
+    if (!$this->Historie->exists()) {
+      throw new NotFoundException(__('Invalid Historie'));
+    }
+    $this->set('history', $this->Historie->read(null, $id));
+  }
+
+/**
+ * add method
+ *
+ * @return void
+ */
+  public function addHistorie() {
+    if ($this->request->is('post')) {
+      $this->Historie->create();
+      if ($this->Historie->save($this->request->data)) {
+        $this->Session->setFlash(__('The Historie has been saved'));
+        $this->redirect(array('action' => 'indexHistorie'));
+      } else {
+        $this->Session->setFlash(__('The Historie could not be saved. Please, try again.'));
+      }
+    }
+  }
+
+
+/**
+ * edit method
+ *
+ * @param string $id
+ * @return void
+ */
+  public function editHistorie($id = null) {
+    $this->Historie->id = $id;
+    if (!$this->Historie->exists()) {
+      throw new NotFoundException(__('Invalid Historie'));
+    }
+    if ($this->request->is('post') || $this->request->is('put')) {
+      if ($this->Historie->save($this->request->data)) {
+        $this->Session->setFlash(__('The Histories has been saved'));
+        $this->redirect(array('action' => 'indexHistorie'));
+      } else {
+        $this->Session->setFlash(__('The Histories could not be saved. Please, try again.'));
+      }
+    } else {
+      $this->request->data = $this->Historie->read(null, $id);
+    }
+  }
+
+/**
+ * delete method
+ *
+ * @param string $id
+ * @return void
+ */
+  public function deleteHistorie($id = null) {
+    if (!$this->request->is('post')) {
+      throw new MethodNotAllowedException();
+    }
+    $this->Historie->id = $id;
+    if (!$this->Historie->exists()) {
+      throw new NotFoundException(__('Invalid lesson'));
+    }
+    if ($this->Historie->delete()) {
+      $this->Session->setFlash(__('Histories deleted'));
+      $this->redirect(array('action' => 'indexHistorie'));
+
+    }
+    $this->Session->setFlash(__('Histories was not deleted'));
+    //$this->redirect(array('action' => 'indexLesson'));
+  }
+
+/*   ********************Historie**************************** */
 }
