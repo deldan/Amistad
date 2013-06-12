@@ -20,6 +20,6 @@
 			<p>Nuestra dirección</p>
 		</h4>
 
-		<p>Existe una gran cantidad de voluntarios, comenzando por el equipo de responsables, preparados específicamente para sus respectivas tareas. Nuestro deseo es servir, enseñar y asesorar, ofreciendo consejo personal y familiar, impartido por personas con experiencia. Queremos ayudar a cada persona a salir adelante y recibir la sanidad y restauración que Dios ofrece.</p>
+		<p>Existe una gran cantidad de colaboradores, comenzando por el equipo de responsables, preparados específicamente para sus respectivas tareas. Nuestro deseo es servir, enseñar y asesorar, ofreciendo consejo personal y familiar, impartido por personas con experiencia. Queremos ayudar a cada persona a salir adelante y recibir la sanidad y restauración que Dios ofrece.</p>
 	</div>
 </div>

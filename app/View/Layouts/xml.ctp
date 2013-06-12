@@ -1,3 +1,7 @@
+<?
+header("Content-Type: application/rss+xml");
+echo '<?xml version="1.0" encoding="UTF-8"?>';
+?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 	<channel>
 		<title>Amistad Cristiana Madrid</title>

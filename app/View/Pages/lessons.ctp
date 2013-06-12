@@ -1,19 +1,19 @@
 <div class="row">
 	<div class="three columns offset-by-eight">
-		<a href="itpc://amistad.trial-web.net/rss">
+		<!-- <a href="http://www.amistadcristianamadrid.org/Pages/rss">
 			<img src="<? echo $this->Html->url('/');?>images/logopodcast.png" width="200px" height="70px" border="0">
-		</a>
+		</a> -->
 	</div>
 </div>
 <div class="row">
-	<? var_dump($lessons);?>
 	<?php foreach ($lessons as $lesson): ?>
 		<div class="ten columns centered lessons2">
 			<div class="seven columns">
 				<div><h4><?php echo ($lesson['Lesson']['title']); ?></h4></div>
 				<div><p>Autor: <?php echo ($lesson['Lesson']['author']); ?></p></div>
 				<div><p>Fecha: <?php echo ($lesson['Lesson']['date']); ?></p></div>
-        <div><a href="<?php echo ($this->Html->url('/mp', true)."/".$lesson['Lesson']['url']);?> " target = "blank">Descarga</a></div>
+				<? $url = str_replace(" ", "%20", $lesson['Lesson']['url']);?>
+        <div><a href="<?php echo ($this->Html->url('/mp', true)."/".$url);?> " target = "blank">Descarga</a></div>
 				<div class="reproductor">
 					<object type="application/x-shockwave-flash" data="/dewplayer/dewplayer-mini.swf" width="160" height="20" id="dewplayer" name="dewplayer">
 						<param name="wmode" value="transparent" />

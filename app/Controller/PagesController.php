@@ -101,10 +101,12 @@ class PagesController extends AppController {
 	}
 
 	public function rss(){
-		$this->layout = 'xml';
-        $lessons = $this->Lesson->find('all');
-        return $this->set(compact('lessons'));
-		$this->set('lessons', $this->Lesson->find('all'));
+		$lessons = array();
+		if ($this->RequestHandler->isRss() ) {
+	         $lessons = $this->Lesson->find('all');
+    	}
+    	return $this->set(compact('lessons'));
+	
 	}
 
 	public function titles(){

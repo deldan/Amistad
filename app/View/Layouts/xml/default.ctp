@@ -1,3 +1,6 @@
+<?header("Content-Type: application/rss+xml");
+echo '<?xml version="1.0" encoding="UTF-8"?>';
+?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 	<channel>
 		<title>Amistad Cristiana Madrid</title> 
@@ -27,31 +30,7 @@
 		<itunes:category text="Christianity"/>
 
 		</itunes:category>'
-		<?
-		foreach ($lessons as $lesson) {
-			echo '<item>
-
-			<title>'.$lesson['Lesson']['title'].'</title>
-
-			<itunes:author>'.$lesson['Lesson']['author'].'</itunes:author>
-
-			<itunes:subtitle>'.$lesson['Lesson']['description'].'</itunes:subtitle>
-
-			<itunes:summary>Predicaciones Amistad Cristiana Madrid</itunes:summary>
-
-			<enclosure url="http://www.amistadcristianamadrid.org/admin/mp/'.$lesson['Lesson']['url'].'" length="8727310" type="audio/mp3" />
-
-			<guid>http://www.amistadcristianamadrid.org/admin/mp/'.$lesson['Lesson']['url'].'</guid>
-
-			<pubDate>'.$lesson['Lesson']['date'].'</pubDate>
-
-			<itunes:duration>30:00</itunes:duration>
-
-			<itunes:keywords>cristiana, madrid, amistad, iglesia, Predicaciones</itunes:keywords>
-
-			</item>';
-		}
-		?>
+		<?php echo $this->fetch('content'); ?>
 	</channel>
 </rss>
 
